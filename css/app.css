@@ -1,0 +1,19 @@
+.state-city-container {
+  padding: 20px;
+}
+
+.state-city-container > div {
+  margin-bottom: 10px;
+}
+
+.state-city-container label{
+  width: 60px;
+  display: inline-block;
+}
+
+.state-city-container select{
+  width: 150px;
+  outline: 0px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
