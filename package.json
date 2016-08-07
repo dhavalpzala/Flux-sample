@@ -16,12 +16,14 @@
     "jest-cli": "^0.4.3",
     "reactify": "^0.15.2",
     "uglify-js": "~2.4.15",
-    "watchify": "^2.1.1"
+    "watchify": "^2.1.1",
+    "lite-server": "^2.1.0"
   },
   "scripts": {
-    "start": "watchify -o js/bundle.js -v -d js/app.js",
+    "start": "concurrently \"npm run serve\" \"watchify -o js/bundle.js -v -d js/app.js\"",
     "build": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > js/bundle.min.js",
-    "test": "jest"
+    "test": "jest",
+    "serve": "lite-server -c config/lite-server.json"
   },
   "author": "Dhaval Zala",
   "browserify": {
